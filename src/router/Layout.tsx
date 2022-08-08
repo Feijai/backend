@@ -1,12 +1,21 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
-import SideBar from '../component/SideBar';
-import Header from '../component/Header';
+import { Layout } from 'antd';
+import React from 'react';
+import SideBar from "../component/SideBar";
 
-export default function Layout() {
-    return (<>
-        <SideBar></SideBar>
-        <Header></Header>
-        <Outlet></Outlet>
-    </>)
-}
+const { Header } = Layout;
+
+const App: React.FC = () => {
+
+    return (
+        <Layout style={{ minHeight: '100vh' }}>
+            <SideBar />
+            <Layout className="site-layout">
+                <Header className="site-layout-background" style={{ padding: 0 }} />
+                <Outlet />
+            </Layout>
+        </Layout>
+    );
+};
+
+export default App;
