@@ -45,6 +45,7 @@ table {
 }
 
 /* global css start */
+@import '~antd/dist/antd.css';
 
 @font-face {
 	font-family: 'Lato';
@@ -54,3 +55,4 @@ table {
 .BGGray{
 	background-color: #F8F9FA;
 }
+
