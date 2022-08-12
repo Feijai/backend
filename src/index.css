@@ -45,14 +45,34 @@ table {
 }
 
 /* global css start */
-@import '~antd/dist/antd.css';
 
 @font-face {
 	font-family: 'Lato';
 	src: url('./assets/Lato-Regular.ttf');
   }
-  
+
+/* BackGroundGray*/
 .BGGray{
 	background-color: #F8F9FA;
 }
 
+/* fontColorBlack*/
+.FCBlack{
+	color:#212529
+}
+
+.Fblod{
+	font-weight: bold;
+}
+
+.s16{
+	font-family: 'Lato';
+	font-Size:16px;
+	line-height: 1.5;
+}
+
+.s14{
+	font-family: 'Lato';
+	font-Size:14px;
+	line-height: 1.5;
+}

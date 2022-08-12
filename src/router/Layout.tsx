@@ -1,21 +1,27 @@
 import { Outlet } from "react-router-dom";
-import { Layout } from 'antd';
 import React from 'react';
 import SideBar from "../component/SideBar";
+import Header from '../component/Header'
+import styled from "styled-components";
 
-const { Header } = Layout;
+const LayoutCss = styled.div`
+    display:flex;
+    .rightSide{
+        width:100%
+    }
+`
 
-const App: React.FC = () => {
+const Layout: React.FC = () => {
 
     return (
-        <Layout style={{ minHeight: '100vh' }}>
+        <LayoutCss>
             <SideBar />
-            <Layout className="site-layout">
-                <Header className="site-layout-background" style={{ padding: 0 }} />
+            <div className="rightSide">
+                <Header />
                 <Outlet />
-            </Layout>
-        </Layout>
+            </div>
+        </LayoutCss>
     );
 };
 
-export default App;
+export default Layout;
